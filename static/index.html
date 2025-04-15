@@ -8,22 +8,49 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
-    <form method="POST" action="">
+    <form method="POST" action="/pets/orders">
         <div class="form-group">
             <label>Какого питомца хочешь?<br>
-                <select name="type">
-                    <option value="capybara" selected>Капибара</option>
-                    <option value="cat">Кот</option>
+                <select name="petType">
+                    <option value="cat" selected>Кот</option>
                     <option value="dog">Дог</option>
-                    <option value="gus">Гусь</option>
-                    <option value="homa">Хомяк</option>
+                    <option value="tiger">Лев(Тигр)</option>
                 </select>
             </label>
         </div>
 
         <div class="form-row">
-            <label>Какого цвета он должен быть?<br>
-                <input type="color" name="Color" value="#ffff00">
+            <label>Какого цвета должны быть его глаза?<br>
+                <input type="color" name="eyeColor" value="#ffff00">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Какого пола он должен быть?<br>
+                <select name="gender">
+                    <option value="boy" selected>Мужской</option>
+                    <option value="girl">Женский</option>
+                    <option value="none">П*др</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Длина хвостика<br>
+                <input
+                        type="text"
+                        name="tailLength"
+                        placeholder="70"
+                        inputmode="numeric"
+                        value="70"
+                        pattern="[0-9]*"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')
+                        && (this.value = Math.max(7, Math.min(120, this.value)))"
+                        onblur="this.value = Math.max(7, Math.min(120, this.value))"
+                        required
+                >
             </label>
         </div>
 
@@ -55,6 +82,13 @@
                         value="+7 (343) 389-94-67"
                         required
                 >
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Дата рождения<br>
+                <input type="date" name="dateOfBirth" value="1990-01-19">
             </label>
         </div>
 
