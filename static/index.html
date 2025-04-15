@@ -10,27 +10,26 @@
     <h1>Найди себе друга!</h1>
     <form method="POST" action="">
         <div class="form-group">
-            <label>Какого питомца хош?
+            <label>Какого питомца хочешь?<br>
                 <select name="type">
                     <option value="capybara" selected>Капибара</option>
                     <option value="cat">Кот</option>
                     <option value="dog">Дог</option>
                     <option value="gus">Гусь</option>
                     <option value="homa">Хомяк</option>
-                    <option value="karp">Карпов :)</option>
                 </select>
             </label>
         </div>
 
         <div class="form-row">
-            <label>Какого цвета он должен быть?
+            <label>Какого цвета он должен быть?<br>
                 <input type="color" name="Color" value="#ffff00">
             </label>
         </div>
 
         <div class="form-row">
-            <label>Какого будут звать питомца?
-                <input type="text" name="name" value="Рефат">
+            <label>Как будут звать питомца?<br>
+                <input type="text" name="name" value="Рефат" placeholder="Рефат">
             </label>
         </div>
 
@@ -45,8 +44,32 @@
                 >
             </label>
         </div>
-    </form>
 
+        <div class="form-group">
+            <label>
+                Ваш номер телефона<br>
+                <input
+                        type="tel"
+                        name="phone"
+                        placeholder="+7 (999) 999-99-99"
+                        value="+7 (343) 389-94-67"
+                        required
+                >
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label class="checkbox">
+                <input type="checkbox" name="rules" value="true" required>
+                <span>Вы принимаете политику нашей компании, согласны с обработкой персональных данных и т.п. и т.д.</span>
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Отправить форму</button>
+            <button type="reset">Сбросить значения</button>
+        </div>
+    </form>
 </main>
 </body>
 </html>
