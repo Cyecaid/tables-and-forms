@@ -8,8 +8,44 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form method="POST" action="">
+        <div class="form-group">
+            <label>Какого питомца хош?
+                <select name="type">
+                    <option value="capybara" selected>Капибара</option>
+                    <option value="cat">Кот</option>
+                    <option value="dog">Дог</option>
+                    <option value="gus">Гусь</option>
+                    <option value="homa">Хомяк</option>
+                    <option value="karp">Карпов :)</option>
+                </select>
+            </label>
+        </div>
 
-    <!--Форму размещай тут-->
+        <div class="form-row">
+            <label>Какого цвета он должен быть?
+                <input type="color" name="Color" value="#ffff00">
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label>Какого будут звать питомца?
+                <input type="text" name="name" value="Рефат">
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Ваша почта<br>
+                <input
+                        type="email"
+                        name="email"
+                        placeholder="фиит@matmmex.ru"
+                        value="email@example.com"
+                >
+            </label>
+        </div>
+    </form>
 
 </main>
 </body>
